@@ -39,4 +39,11 @@ int main()
 	strMap[strList[i]] = i;
     }
     std::cout << "Total time taken " << tm.elapsed() << std::endl;
+
+    HashMap<double, string> doubleMap;
+    doubleMap[0.023] = "hello";
+    doubleMap[0.025] = "world";
+    auto iter = doubleMap.findNode(0.023);
+    if (iter != doubleMap.end())
+	std::cout << iter->value_ << std::endl;
 }
